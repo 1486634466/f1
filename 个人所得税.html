@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+window.onload=function(){
+    var a=prompt('请输入工资');
+    var wxyj=1000;
+    var b=5000;
+    var c=a-wxyj-b;
+    var sl,ss;
+    var d;
+    if(isNaN(a)){
+        alert('请输入数字');
+    }else{
+    if(a<=5000){
+        alert('不收税');
+    }else{
+    
+    
+    if(c>80000){
+        sl=0.45;
+        ss=13505;
+    }else if(c>55000){
+        sl=0.35;
+        ss=5505;
+    }else if(c>35000){
+        sl=0.3;
+        ss=2755;
+    }
+    else if(c>9000){
+        sl=0.25;
+        ss=1005;
+    }
+    else if(c>4500){
+        sl=0.2;
+        ss=555;
+    }
+    else if(c>1500){
+        sl=0.1;
+        ss=105;
+    }
+    else if(c>0){
+        sl=0.03;
+        ss=0;
+    }
+    d=c*sl-ss;
+    alert(d);
+}
+}
+}
+</script>
+</html>
