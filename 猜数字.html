@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var num=parseInt(Math.random()*100);
+console.log(num);
+
+var guess=prompt('请输入您猜测的数字(0-100)');
+for(var i=1;i<=5;i++){
+    if(i==1){
+        if(guess==num){
+            alert('恭喜你猜对了');
+            break;
+        }else{
+            if(guess>num){
+                guess=prompt('你已经是第'+i+'次输入，数字有些大了');
+               
+            }else{
+                guess=prompt('你已经是第'+i+'次输入，数字有些小了');
+            }
+        }
+    }
+    if(i>1&&i<5){
+        if(guess==num){
+            alert('恭喜你猜对了');
+            break;
+        }else{
+            if(guess>num){
+                guess=prompt('你已经是第'+i+'次输入，数字有些大了');
+            }else{
+                guess=prompt('你已经是第'+i+'次输入，数字有些小了');
+            }
+        }
+    }
+    if(i==5){
+        if(guess!=num){
+            alert('你已经没有机会了');
+            
+        }else{
+            alert('恭喜你猜对了');
+            break;
+            }
+        }
+}
+
+
+
+
+</script>
+</html>
